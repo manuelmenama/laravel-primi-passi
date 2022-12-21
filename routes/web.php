@@ -16,3 +16,24 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('/landing', function (){
+
+    $operators = [
+        [
+            "nome"=>"Pino",
+            "cognome"=>"Alberi",
+        ],
+        [
+            "nome"=>"Mario",
+            "cognome"=>"Superi",
+        ],
+        [
+            "nome"=>"Alberto",
+            "cognome"=>"Ortopanoramico",
+        ],
+
+    ];
+
+    return view('landing', compact('operators'));
+});
